@@ -31,11 +31,10 @@ public class TrackServiceImpl implements TrackService {
         return retrivedTrack;
     }
 
-//    @Override
-//    public List<Track> getAllTracks(Track track) {
-//       List<Track> retrivedList = trackRepository.findAll();
-//        return retrivedList;
-//    }
+    @Override
+    public List<Track> getAllTracks() {
+        return trackRepository.findAll();
+    }
 
 //    @Override
 //    public Track deleteTrackById(int id) {

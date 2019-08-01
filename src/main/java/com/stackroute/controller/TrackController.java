@@ -8,6 +8,8 @@ import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v1")
 public class TrackController {
@@ -32,11 +34,11 @@ public class TrackController {
         return new ResponseEntity<Track>(retrivedTrack,HttpStatus.OK);
     }
 
-//    @GetMapping("tracks")
-//    public ResponseEntity<?> getAllTracks(){
-//        Track retrivedTracks = trackService.getAllTracks();
-//        return new ResponseEntity<>(retrivedTracks,HttpStatus.OK);
-//    }
+    @GetMapping("tracks")
+    public ResponseEntity<?> getAllTracks(){
+        return new ResponseEntity<List<Track>>( trackService.getAllTracks(), HttpStatus.OK);
+
+    }
 
 //    @DeleteMapping("track/{id}")
 //     public ResponseEntity<?> deleteTrackById(@PathVariable int id){
