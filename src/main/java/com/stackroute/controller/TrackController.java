@@ -40,11 +40,11 @@ public class TrackController {
 
     }
 
-//    @DeleteMapping("track/{id}")
-//     public ResponseEntity<?> deleteTrackById(@PathVariable int id){
-//         Track deleteTrack = trackService.deleteTrackById(id);
-//         return new ResponseEntity<>(deleteTrack,HttpStatus.OK);
-//    }
+    @DeleteMapping("track/{id}")
+     public ResponseEntity<?> deleteTrackById(@PathVariable int id){
+         Track deleteTrack = trackService.deleteTrackById(id);
+         return new ResponseEntity<>(deleteTrack,HttpStatus.OK);
+    }
 
 
 
