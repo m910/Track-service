@@ -43,9 +43,11 @@ public class TrackServiceImpl implements TrackService {
          return optionalTrack.get();
     }
 
-//    @Override
-//    public Track updateTrackById(int id) {
-//        Track updateTrack = trackRepository.(id);
-//        return updateTrack;
-//    }
+    @Override
+    public Track updateTrackById(int id,Track track) {
+        Optional<Track> optionalTrack = trackRepository.findById(id);
+        Track updateTrack= trackRepository.save(track);
+        return updateTrack;
+
+    }
 }
